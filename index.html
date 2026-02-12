@@ -1,98 +1,125 @@
-<!DOCTYPE html><html>
+<!DOCTYPE html>
+<html>
 <head>
-<title>Soyamah Ammu ❤️</title><style>
+<title>Soyamah Ammu ❤️</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
 body{
-  background: #fff0f5;
-  text-align: center;
-  font-family: Arial;
-  overflow-x: hidden;
+  background:#fff0f5;
+  text-align:center;
+  font-family:Arial;
+  overflow-x:hidden;
+  margin:0;
 }
 
 /* Falling Hearts */
 .heart{
-  position: fixed;
-  top: -10px;
-  color: #ff3366;
-  font-size: 20px;
-  animation: fall linear infinite;
+  position:fixed;
+  top:-10px;
+  color:#ff3366;
+  font-size:20px;
+  animation:fall linear infinite;
 }
 @keyframes fall{
-  to{ transform: translateY(100vh); }
-}
-
-.openBtn{
-  margin-top: 70px;
-  padding: 12px 22px;
-  border: none;
-  background: #ff2d75;
-  color: white;
-  border-radius: 20px;
-  font-size: 16px;
-}
-
-.card{
-  background: white;
-  max-width: 430px;
-  margin: 20px auto;
-  padding: 18px;
-  border-radius: 20px;
-  box-shadow: 0 0 15px #ff99cc;
-  display: none;
-}
-
-img{
-  width: 100%;
-  border-radius: 15px;
-}
-
-h1{ color:#ff2d75; }
-
-#typing{
-  margin-top: 12px;
-  min-height: 110px;
-  line-height: 1.6;
-}
-
-/* Timeline */
-.timeline{
-  text-align: left;
-  margin-top: 15px;
-  background: #fff7fb;
-  padding: 10px;
-  border-radius: 12px;
-}
-
-.step{
-  margin-bottom: 8px;
-  font-size: 14px;
+  to{ transform:translateY(100vh); }
 }
 
 /* Buttons */
-.btnBox{
-  margin-top: 15px;
+button{
+  padding:10px 18px;
+  border:none;
+  border-radius:20px;
+  color:white;
+  margin:5px;
+  font-size:15px;
 }
-
-.yes{
-  padding: 8px 16px;
-  margin: 5px;
-  border: none;
-  border-radius: 15px;
-  color: white;
-}
-
 .yes{ background:#ff2d75; }
 .forever{ background:#222; }
 
+.openBtn{
+  margin-top:40px;
+  background:#ff2d75;
+}
+
+.card{
+  background:white;
+  max-width:430px;
+  margin:20px auto;
+  padding:18px;
+  border-radius:20px;
+  box-shadow:0 0 15px #ff99cc;
+  display:none;
+}
+
+img{
+  width:100%;
+  border-radius:15px;
+}
+
+h1,h2{ color:#ff2d75; }
+
+.timeline{
+  text-align:left;
+  margin-top:15px;
+  background:#fff7fb;
+  padding:10px;
+  border-radius:12px;
+  font-size:14px;
+}
+
+.step{ margin-bottom:8px; }
+
 .result{
-  margin-top: 10px;
-  font-weight: bold;
+  margin-top:10px;
+  font-weight:bold;
   color:#d63384;
 }
-</style></head><body><button class="openBtn" onclick="openLetter()">
+</style>
+</head>
+
+<body>
+
+<h2>Happy Valentine’s Day dii Pondati ❤️<br>#ForeverWithMyQueen 🖤</h2>
+
+<!-- PASSWORD SCREEN -->
+<div id="lockScreen" style="margin-top:40px;">
+  <h3>Enter Our Secret Password 💖</h3>
+  <input type="password" id="passInput"
+  placeholder="Enter Password"
+  style="padding:8px;border-radius:10px;border:1px solid #ff2d75;">
+  <br><br>
+  <button onclick="checkPassword()" class="yes">
+  Unlock My Heart 🔐
+  </button>
+  <div id="wrongMsg" style="color:red;"></div>
+</div>
+
+<!-- OPEN BUTTON -->
+<button class="openBtn" id="openBtn"
+onclick="openLetter()" style="display:none;">
 Tap to Open Our Story 💌
-</button><audio id="song" loop>
+</button>
+
+<!-- AUDIO -->
+<audio id="song" loop>
   <source src="Sivantha_kangal.mp3" type="audio/mpeg">
-</audio><div class="card" id="card"><h1>Soyamah Ammu 👑</h1><div><b>Sowmiya ❤️ Gunaseelan</b></div><img src="Photo.jpg"><div id="typing"></div><button onclick="playSong()" class="yes">Play Our Song 🎵</button>
+</audio>
+
+<!-- LOVE CARD -->
+<div class="card" id="card">
+
+<h1>Soyamah Ammu 👑</h1>
+<b>Sowmiya ❤️ Gunaseelan</b>
+<br><br>
+
+<img src="Photo.jpg">
+
+<div id="typing" style="margin-top:12px;min-height:110px;"></div>
+
+<button onclick="playSong()" class="yes">
+Play Our Song 🎵
+</button>
 
 <div class="timeline">
 <b>Our Love Timeline 💞</b>
@@ -131,9 +158,8 @@ That night, when you sent me a kiss emoji 😘 during the call… I was complete
 After that, we fixed a date to meet and go somewhere together.
 </div><div class="step">
 * 29/06/2024 — The most beautiful and unforgettable day ✨
-</div><div class="step">
-* 29 June 2024 – Dharmapuri Govt Bus –  
-that day we became LIFE PARTNERS.
+<div class="step">
+29/06/2024 – Dharmapuri Govt Bus – We became LIFE PARTNERS 💍
 </div><div class="step">
 * 29 june 2024 Afternoon 3pm We Started our Love Journey and New Chapter.
 </div><div class="step">
@@ -151,61 +177,100 @@ that day we became LIFE PARTNERS.
 where I loved you more than myself.
 </div><div class="step">
 * Not This Places We  together Met places Are Always Favourite.
+<div class="step">From 8th standard crush → Forever Love 💖</div>
 </div>
-</div><div class="btnBox">
-<button class="yes" onclick="accept()">YES 💖</button>
-<button class="yes forever" onclick="accept()">
-FOREVER YES 🖤
-</button>
-</div><div id="res" class="result"></div><div style="margin-top:12px;font-weight:bold">
-Will you marry me my queen 🖤
-</div></div><script>
 
+<div style="margin-top:12px;font-weight:bold">
+Will you marry me my queen 🖤
+</div>
+
+<div>
+<button class="yes" onclick="accept()">YES 💖</button>
+<button class="yes forever" onclick="accept()">FOREVER YES 🖤</button>
+</div>
+
+<div id="res" class="result"></div>
+
+</div>
+
+<script>
+
+/* PASSWORD */
+function checkPassword(){
+  const correctPassword="29062024";
+  const entered=document.getElementById("passInput").value;
+
+  if(entered===correctPassword){
+    document.getElementById("lockScreen").style.display="none";
+    document.getElementById("openBtn").style.display="inline-block";
+  }else{
+    document.getElementById("wrongMsg").innerHTML=
+    "Wrong password dii Pondati 😜 Try again ❤️";
+  }
+}
+
+/* OPEN LETTER */
 function openLetter(){
- document.querySelector('.openBtn').style.display='none';
- document.getElementById('card').style.display='block';
+ document.getElementById("openBtn").style.display="none";
+ document.getElementById("card").style.display="block";
+ document.getElementById("song").play();
  typeText();
 }
 
+/* PLAY SONG */
 function playSong(){
- document.getElementById('song').play();
+ document.getElementById("song").play();
 }
 
-let txt =
-`சிவந்த கண்கள் பேசும் காதல்,
+/* TYPING TEXT */
+let txt=`சிவந்த கண்கள் பேசும் காதல்,
 உன் சிரிப்பில் தான் என் உலகம்.
 
 Soyamah Ammu – நீ தான் என் உயிர்.
-
 I need you as always forever with me my queen 👑`;
 
 let i=0;
 function typeText(){
- if(i < txt.length){
-  document.getElementById('typing').innerHTML += txt.charAt(i);
+ if(i<txt.length){
+  document.getElementById("typing").innerHTML+=txt.charAt(i);
   i++;
   setTimeout(typeText,40);
  }
 }
 
+/* ACCEPT */
 function accept(){
- document.getElementById('res').innerHTML =
+ document.getElementById("res").innerHTML=
  "You made me the happiest man in the world ❤️";
+ fireworks();
 }
 
-// hearts
+/* FIREWORKS */
+function fireworks(){
+ for(let i=0;i<30;i++){
+   const spark=document.createElement("div");
+   spark.innerHTML="✨";
+   spark.style.position="fixed";
+   spark.style.left=Math.random()*100+"vw";
+   spark.style.top=Math.random()*100+"vh";
+   spark.style.fontSize="20px";
+   document.body.appendChild(spark);
+   setTimeout(()=>spark.remove(),1000);
+ }
+}
+
+/* FALLING HEARTS */
 setInterval(()=>{
- const h=document.createElement('div');
- h.className='heart';
- h.innerHTML='❤';
- h.style.left=Math.random()*100+'vw';
- h.style.animationDuration=(3+Math.random()*3)+'s';
+ const h=document.createElement("div");
+ h.className="heart";
+ h.innerHTML="❤";
+ h.style.left=Math.random()*100+"vw";
+ h.style.animationDuration=(3+Math.random()*3)+"s";
  document.body.appendChild(h);
  setTimeout(()=>h.remove(),6000);
 },300);
 
-</script></body>
+</script>
+
+</body>
 </html>
-
-
-
