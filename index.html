@@ -1,0 +1,211 @@
+<!DOCTYPE html><html>
+<head>
+<title>Soyamah Ammu ❤️</title><style>
+body{
+  background: #fff0f5;
+  text-align: center;
+  font-family: Arial;
+  overflow-x: hidden;
+}
+
+/* Falling Hearts */
+.heart{
+  position: fixed;
+  top: -10px;
+  color: #ff3366;
+  font-size: 20px;
+  animation: fall linear infinite;
+}
+@keyframes fall{
+  to{ transform: translateY(100vh); }
+}
+
+.openBtn{
+  margin-top: 70px;
+  padding: 12px 22px;
+  border: none;
+  background: #ff2d75;
+  color: white;
+  border-radius: 20px;
+  font-size: 16px;
+}
+
+.card{
+  background: white;
+  max-width: 430px;
+  margin: 20px auto;
+  padding: 18px;
+  border-radius: 20px;
+  box-shadow: 0 0 15px #ff99cc;
+  display: none;
+}
+
+img{
+  width: 100%;
+  border-radius: 15px;
+}
+
+h1{ color:#ff2d75; }
+
+#typing{
+  margin-top: 12px;
+  min-height: 110px;
+  line-height: 1.6;
+}
+
+/* Timeline */
+.timeline{
+  text-align: left;
+  margin-top: 15px;
+  background: #fff7fb;
+  padding: 10px;
+  border-radius: 12px;
+}
+
+.step{
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+/* Buttons */
+.btnBox{
+  margin-top: 15px;
+}
+
+.yes{
+  padding: 8px 16px;
+  margin: 5px;
+  border: none;
+  border-radius: 15px;
+  color: white;
+}
+
+.yes{ background:#ff2d75; }
+.forever{ background:#222; }
+
+.result{
+  margin-top: 10px;
+  font-weight: bold;
+  color:#d63384;
+}
+</style></head><body><button class="openBtn" onclick="openLetter()">
+Tap to Open Our Story 💌
+</button><audio id="song" loop>
+  <source src="sivantha_kangal.mp3" type="audio/mpeg">
+</audio><div class="card" id="card"><h1>Soyamah Ammu 👑</h1><div><b>Sowmiya ❤️ Gunaseelan</b></div><img src="photo.jpg"><div id="typing"></div><button onclick="playSong()" class="yes">Play Our Song 🎵</button>
+
+<div class="timeline">
+<b>Our Love Timeline 💞</b>
+</div><div class="step">
+* First Meet Place – Vasavi Higher Secondary School,  
+Shevapet, Salem.
+<div class="step">
+* 8th Standard – You were my crush, my one side love.
+</div><div class="step">
+* Then we became friends
+</div><div class="step">
+* College Days – we turned into close friends, 
+each other’s favourite person. 
+</div><div class="step">
+* 2024 started with so many unexpected happy moments in my life.
+</div><div class="step">
+* The first time we met — that tea date on 07/03/2024 — is still one of my most memorable days.
+</div><div class="step">
+* After that, one incident happened. That was when I realized that I couldn’t stay without talking to you.
+</div><div class="step">
+* We slowly became very close. One day I asked you to come out with me, but because of some college days situation, you ignored it.
+</div><div class="step">
+* As our bond grew stronger, we had a few small fights. During one of those times, I asked you if we could go out somewhere and spend some long time together.
+</div><div class="step">
+* Then came our first bus travel on 15/05/2024.
+That was the first time we sat next to each other and traveled together for almost an hour.
+</div><div class="step">
+* After that, everything that happened felt like magic.
+Meeting you at the temple on your birthday, going shopping together — every moment was special.
+</div><div class="step">
+* Then suddenly one day on 24/06/2024, you asked if we could talk on a call.
+After that, for one whole week, we talked nonstop for 2–3 hours every day.
+</div><div class="step">
+* Then on 28/06/2024, we had a late night video call.
+That night, when you sent me a kiss emoji 😘 during the call… I was completely lost.
+After that, we fixed a date to meet and go somewhere together.
+</div><div class="step">
+* 29/06/2024 — The most beautiful and unforgettable day ✨
+</div><div class="step">
+* 29 June 2024 – Dharmapuri Govt Bus –  
+that day we became LIFE PARTNERS.
+</div><div class="step">
+* 29 june 2024 Afternoon 3pm We Started our Love Journey and New Chapter.
+</div><div class="step">
+* 06 july 2024 After lovers our First Date place in Anna park with Lotz of happiness,Joy and Kisses 😻😘
+</div><div class="step">
+* 15 July 2024 After lovers our First travel 
+</div><div class="step">
+* 02 Sep 2024 Our First Bike Long Travel
+</div><div class="step">
+* Then Make Lots of Memorable Moments
+</div><div class="step">
+* Lots of Tea Date.
+</div><div class="step">
+* Utthumalaii & Bangalore days –  
+where I loved you more than myself.
+</div><div class="step">
+* Not This Places We  together Met places Are Always Favourite.
+</div>
+</div><div class="btnBox">
+<button class="yes" onclick="accept()">YES 💖</button>
+<button class="yes forever" onclick="accept()">
+FOREVER YES 🖤
+</button>
+</div><div id="res" class="result"></div><div style="margin-top:12px;font-weight:bold">
+Will you marry me my queen 🖤
+</div></div><script>
+
+function openLetter(){
+ document.querySelector('.openBtn').style.display='none';
+ document.getElementById('card').style.display='block';
+ typeText();
+}
+
+function playSong(){
+ document.getElementById('song').play();
+}
+
+let txt =
+`சிவந்த கண்கள் பேசும் காதல்,
+உன் சிரிப்பில் தான் என் உலகம்.
+
+Soyamah Ammu – நீ தான் என் உயிர்.
+
+I need you as always forever with me my queen 👑`;
+
+let i=0;
+function typeText(){
+ if(i < txt.length){
+  document.getElementById('typing').innerHTML += txt.charAt(i);
+  i++;
+  setTimeout(typeText,40);
+ }
+}
+
+function accept(){
+ document.getElementById('res').innerHTML =
+ "You made me the happiest man in the world ❤️";
+}
+
+// hearts
+setInterval(()=>{
+ const h=document.createElement('div');
+ h.className='heart';
+ h.innerHTML='❤';
+ h.style.left=Math.random()*100+'vw';
+ h.style.animationDuration=(3+Math.random()*3)+'s';
+ document.body.appendChild(h);
+ setTimeout(()=>h.remove(),6000);
+},300);
+
+</script></body>
+</html>
+
+
+
